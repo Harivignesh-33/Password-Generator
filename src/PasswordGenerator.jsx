@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { TbCopy } from "react-icons/tb";
 
 export const PasswordGenerator = () => {
   const [length, setLength] =useState();
@@ -24,35 +25,35 @@ export const PasswordGenerator = () => {
 
   const copyToCliboard = () =>{
     navigator.clipboard.writeText(password);
-    alert("password copied to clipboard successfully")
+    alert("Password copied to clipboard successfully")
 }
   return (
     <div className='password-generator'>
       <h2>Strong Password Generator</h2>
       <div className="input-group">
-        <label htmlFor="num">Password Length : </label>
-        <input type="number"  id="num" value={length} onChange={(e)=>setLength(parseInt(e.target.value))}/>
+        <label htmlFor="num" className='length'>Password Length : </label>
+        <input type="number"  id="num" value={length} onChange={(e)=>setLength(parseInt(e.target.value))} placeholder='Enter the length of the password : '/>
       </div>
       <div className="checkbox-group">
         <input type="checkbox"  id="upper" checked={includeUppercase} onChange={(e)=> setincludeUppercase(e.target.checked)}/>
-        <label htmlFor="upper">include Uppercase</label>
+        <label htmlFor="upper">Include Uppercase</label>
       </div>
       <div className="checkbox-group">
         <input type="checkbox"  id="lower" checked={includeLowercase} onChange={(e)=> setincludeLowercase(e.target.checked)}/>
-        <label htmlFor="lower">include Lowercase</label>
+        <label htmlFor="lower">Include Lowercase</label>
       </div>
       <div className="checkbox-group">
         <input type="checkbox"  id="number" checked={includeNumbers} onChange={(e)=> setincludeNumbers(e.target.checked)}/>
-        <label htmlFor="number">include Numbers</label>
+        <label htmlFor="number">Include Numbers</label>
       </div>
       <div className="checkbox-group">
         <input type="checkbox"  id="symbol" checked={includeSymbols} onChange={(e)=> setincludeSymbols(e.target.checked)}/>
-        <label htmlFor="symbol">include Symbols</label>
+        <label htmlFor="symbol">Include Symbols</label>
       </div>
       <button className='generate-btn' onClick={generatePassword}>Generate Password</button>
       <div className="generated-password">
         <input type="text" readOnly value={password}/>
-        <button className='copy-btn' onClick={copyToCliboard}>📋COPY</button>
+        <button className='copy-btn' onClick={copyToCliboard} title='Copy to Clipboard'><TbCopy /></button>
       </div>
     </div>
   )
