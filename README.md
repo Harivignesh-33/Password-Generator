@@ -2,12 +2,12 @@
 
 This project is a simple password generating website built with React.js. It allows users to create strong passwords with options to include uppercase letters, lowercase letters, numbers, and symbols.
 
-## Website Link
 
+## Image
 ![Screenshot 2024-05-16 162808](https://github.com/Harivignesh-33/Password-Generator/assets/131459225/dda18969-7a33-4808-b1c1-d092c56dc735)
 
+## Website Link
 [Link to the Password Generating Website](https://harivignesh-33.github.io/Password-Generator/)
-
 
 
 ## Features
