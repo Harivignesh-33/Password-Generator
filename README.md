@@ -4,11 +4,9 @@ This project is a simple password generating website built with React.js. It all
 
 
 
-## Website 
-[Link to the  Website](https://harivignesh-33.github.io/Password-Generator/)
+## [Preview Site](https://harivignesh-33.github.io/Password-Generator/)
 
  
-
 ![Screenshot 2024-05-16 162748](https://github.com/Harivignesh-33/Password-Generator/assets/131459225/8f61b5ce-45df-4a64-8625-7fc79e772cca)
 
 
